@@ -1,0 +1,23 @@
+{
+  "name": "test-adamantium",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "app/index.html",
+  "license": "MIT",
+  "homepage": "app/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.2",
+    "normalize.css": "~3.0.2"
+  },
+  "devDependencies": {
+    "font-awesome": "~4.3.0"
+  }
+}

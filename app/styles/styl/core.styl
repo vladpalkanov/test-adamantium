@@ -1,0 +1,122 @@
+*, *:after, *:before
+	box-sizing border-box
+
+header,
+section,
+footer
+	width 100%
+	height auto
+
+//footer positioning
+html,
+body,
+.global-page-wrapper
+	height 100%
+
+body > .global-page-wrapper
+	min-height 100%
+	height auto!important
+
+.main-content
+	clearfix()
+	padding-bottom 27px
+
+.main-footer
+	position relative
+	margin-top -27px
+	height 27px
+	clear both
+
+// off canvas nav
+.global-page-wrapper
+	width 100%
+	position relative
+	overflow hidden
+
+.main-content
+	width 100%
+	height 100%
+	position relative
+	transform translateX(0)
+	transition .3s ease all
+
+.main-nav
+	width 250px
+	display block
+	height 100%
+	position absolute
+	top 0
+	left -250px
+	padding 0 8px
+
+	&__menu
+		width 100%
+		margin 0
+		list-style none
+		padding 0
+
+		&-item
+			background color-panel-sec
+			box-shadow 0 1px 4px 0 rgba(0,0,0,.3)
+			margin-bottom 4px
+			text-align center
+			width 100%
+
+			&:hover,
+			&.active
+				background color-panel-main
+				.main-nav__menu-link
+					color color-text-panel
+
+		&-link
+			width 100%
+			color color-panel-main
+			text-decoration none
+			text-transform uppercase
+			padding 10px
+			display block
+
+.global-page-wrapper.show-nav .main-content
+	transform translateX(250px)
+
+	&::after
+		content ''
+		position absolute
+		width 100%
+		top 0
+		bottom 0
+		background rgba(0,52,113,.6);
+		z-index 4
+
+//elements wrapper
+.wrapper
+	width 100%
+	max-width 100%
+	margin 0 auto
+	height auto
+	padding 0
+
+clearfix()
+	&:before
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	zoom: 1 if support-for-ie
+
+.icon-md
+	display inline-block
+	background-size 46px 55px
+
+.icon-sm
+	display inline-block
+	background-size 33px 23px
+
+.pull-left
+	display inline-block
+	float left
+
+.pull-right
+	display inline-block
+	float right
